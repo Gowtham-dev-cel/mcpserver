@@ -1,12 +1,7 @@
 from fastmcp import FastMCP
 
 # 1. Create the server
-mcp = FastMCP(
-    "myserver",
-    transport="http",       # <-- Important
-    host="0.0.0.0",
-    port=8000
-)
+mcp = FastMCP("myserver")
 
 # 2. Add a tool
 @mcp.tool
@@ -28,4 +23,4 @@ def personalized_greeting(name: str) -> str:
 
 # 5. Make the server runnable
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="http", host="127.0.0.1", port=8000)
