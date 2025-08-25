@@ -1,7 +1,12 @@
 from fastmcp import FastMCP
 
 # 1. Create the server
-mcp = FastMCP(name="My First MCP Server")
+mcp = FastMCP(
+    "myserver",
+    transport="http",       # <-- Important
+    host="0.0.0.0",
+    port=8000
+)
 
 # 2. Add a tool
 @mcp.tool
