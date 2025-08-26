@@ -25,7 +25,7 @@ def fetch_user_lists(api_key: str) -> dict:
     Returns:
         dict: JSON response containing user lists with details like id, name, totalContacts, fileUrl, etc.
     """
-    url = "http://localhost:3000/api/lists"
+    url = f"{BASE_API_URL}/lists"
     headers = {
         "x-api-key": api_key
     }
