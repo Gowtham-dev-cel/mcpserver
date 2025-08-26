@@ -5,7 +5,7 @@ import httpx
 mcp = FastMCP("myserver")
 
 
-BASE_API_URL = "https://roascraft.onrender.com"
+BASE_API_URL = "https://roascraft.onrender.com/api"
 
 
 # 2. Add a tool
